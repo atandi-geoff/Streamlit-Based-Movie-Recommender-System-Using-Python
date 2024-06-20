@@ -1,5 +1,7 @@
+fastapi
 streamlit
 pandas
 requests
 fuzzywuzzy
 scikit-learn
+uvicorn
