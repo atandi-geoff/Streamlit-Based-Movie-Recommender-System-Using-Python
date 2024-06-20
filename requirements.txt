@@ -1,5 +1,6 @@
 fastapi
 streamlit
+ipython
 pandas
 requests
 fuzzywuzzy
