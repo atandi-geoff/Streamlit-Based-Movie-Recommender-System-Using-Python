@@ -13,6 +13,25 @@ import pickle
 
 import requests
 
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger()
+
+@st.cache_data
+def load_data():
+    try:
+        # Your data loading logic here
+        pass
+    except FileNotFoundError as e:
+        logger.error(f"File not found: {e}")
+        st.error("File not found: bundle.css")
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
+        st.error("An error occurred")
+
+# Your existing code here
+
 def fetch_poster(movie_id):
      url = "https://api.themoviedb.org/3/movie/{}?api_key=c7ec19ffdd3279641fb606d19ceb9bb1&language=en-US".format(movie_id)
      data=requests.get(url)
